@@ -1,12 +1,24 @@
 package com.day01_demo.sbh.bean;
 
-public class student {
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import java.io.Serializable;
+@ApiModel("学生类")
+public class student implements Serializable {
+    @ApiModelProperty("学号")
     private String id;
+    @ApiModelProperty("姓名")
     private String name;
+    @ApiModelProperty("性别")
     private char sex;
+    @ApiModelProperty("年龄")
     private int age;
+    @ApiModelProperty("学院")
     private String college;
+    @ApiModelProperty("班级")
     private String cla;
+    @ApiModelProperty("排名")
     private int rank;
 
     public String getId() {
